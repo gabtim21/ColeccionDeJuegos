@@ -34,7 +34,7 @@
                     <navigationItem key="navigationItem" id="3vM-Ms-K9p">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Teu-mN-Jxs">
                             <connections>
-                                <segue destination="5DZ-XZ-SaI" kind="show" id="5dx-jq-Rnt"/>
+                                <segue destination="5DZ-XZ-SaI" kind="show" identifier="juegoSegue" id="5dx-jq-Rnt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -66,18 +66,26 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Titulo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vKt-YP-v0w">
-                                <rect key="frame" x="59" y="590" width="269" height="30"/>
+                                <rect key="frame" x="59" y="575" width="269" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BM-9h-l3U">
-                                <rect key="frame" x="162" y="628" width="63" height="30"/>
+                                <rect key="frame" x="48" y="613" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Agregar"/>
                                 <connections>
                                     <action selector="agregarTapped:" destination="5DZ-XZ-SaI" eventType="touchUpInside" id="rgI-A6-cMw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eds-yD-Nca">
+                                <rect key="frame" x="48" y="637" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Eliminar"/>
+                                <connections>
+                                    <action selector="eliminarTapped:" destination="5DZ-XZ-SaI" eventType="touchUpInside" id="BBM-1W-IQl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,12 +113,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="JuegoImagenView" destination="YZh-JS-Wel" id="dO4-x2-thO"/>
+                        <outlet property="agregarActualizarBoton" destination="8BM-9h-l3U" id="gfG-TM-AU6"/>
+                        <outlet property="eliminarBoton" destination="eds-yD-Nca" id="qIV-ya-lPu"/>
                         <outlet property="tituloTextField" destination="vKt-YP-v0w" id="liH-qK-nLy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzQ-b0-iaL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861.5999999999999" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1861.5" y="138.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QmF-72-zSY">
